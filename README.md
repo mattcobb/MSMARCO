@@ -21,16 +21,16 @@ For more information about [Conversational Search](https://github.com/dfcf93/MSM
 ## Dataset Generation, Data Format, And Statistics
 What is the difference between MSMARCO and other MRC datasets? We believe the advantages that are special to MSMARCO are:
 - Real questions: All questions have been sample from real anonymized bing queries.
-- Real Documents: Most Url's that we have source the passages from contain the full web documents. These can be used as extra contextual information to improve systems or be used to compete in our expert task.
+- Real Documents: Most Url's that we have sourced the passages from contain the full web documents. These can be used as extra contextual information to improve systems or be used to compete in our expert task.
 - Human Generated Answers: All questions have an answer written by a human. If there was no answer in the passages the judge read they have written 'No Answer Present.'
 - Human Generated Well-Formed: Some questions contain extra human evaluation to create well formed answers that could be used by intelligent agents like Cortana, Siri, Google Assistant, and Alexa.
-- Dataset Size: At over 1 million queries the dataset is large enough to train the most complex systems and also sample the data for specific applications.
+- Dataset Size: At over 1 million queries, the dataset is large enough to train the most complex systems and also sample the data for specific applications.
 
 ## Download the Dataset
 To Download the MSMARCO Dataset please navigate to [msmarco.org](http://www.msmarco.org/dataset.aspx) and agree to our Terms and Conditions. If there is some data you think we are missing and would be useful please open an issue. 
 
 ### Tasks
-In an effort to produce a dataset that can continue to be challanging and rewarding we have broken down the MSMARCO dataset into tasks of varying difficulty.
+In an effort to produce a dataset that can continue to be challanging and rewarding, we have broken down the MSMARCO dataset into tasks of varying difficulty.
 
 ##### Question Answering
 Given a query q and a set of passages P = p1, p2, p3,... p10 a successful Machine Reading Comprehension system is expected to read and understand both the questions and passages. Then, the system must accuratley decide if the passages provide addequate information to answer the query since not all queries have an answer. If there is not enough information, the system should response 'No Answer Present.'. If there is enough information the system should create a quality answer. The target of the answer a should be as close as possible to the human generated refrence answers RA= ra1,ra2,...,ram. Evaluation will be done using ROUGE-L, BLEU-1, and a F1 score computed by measuring how well a system can know to answer questions or not. Questions that have the do not have an answer will not be used to calculate ROUGE-L or BLEU-1.
